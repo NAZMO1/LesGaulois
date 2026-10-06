@@ -1,12 +1,14 @@
-package personnages;
+package test_fonctionnel;
 
-public class Gaulois {
+import personnages.Gaulois;
+
+public class TestGaulois {
     private String nom;
     private int force;
 
-    public Gaulois(String nom, int force) {
+    public TestGaulois(String nom, int force) {
         this.nom = nom;
-        this.force = force;
+        this.setForce(force);
     }
 
     public String getNom() {
@@ -26,9 +28,16 @@ public class Gaulois {
         return nom;
     }
 
-    // 2.1 Méthode main de test
     public static void main(String[] args) {
         Gaulois asterix = new Gaulois("Astérix", 8);
         System.out.println(asterix);
     }
+
+	public int getForce() {
+		return force;
+	}
+
+	public void setForce(int force) {
+		this.force = force;
+	}
 }
